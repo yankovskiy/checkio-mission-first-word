@@ -6,10 +6,9 @@ requirejs(['ext_editor_io', 'jquery_190'],
         var $tryit;
 
         var io = new extIO({
-            multipleArguments: true,
             functions: {
-                python: 'sum_two',
-                js: 'sumTwo'
+                python: 'first_word',
+                js: 'firstWord'
             }
         });
         io.start();

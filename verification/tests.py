@@ -11,26 +11,43 @@ Each test is dict with
 TESTS = {
     "Basics": [
         {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "input": "Hello world",
+            "answer": "Hello"
         },
         {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
+            "input": " a word ",
+            "answer": "a",
+            "explanation": "starts with space"
+        },
+        {
+            "input": "don't touch it",
+            "answer": "don't",
+            "explanation": "apostrophe can be part of a word"
+        },
+        {
+            "input": "greetings, friends",
+            "answer": "greetings",
+            "explanation": "comma is not a part of a word"
+        },
+        {
+            "input": "... and so on ...",
+            "answer": "and",
+            "explanation": "text starts with dots"
+        },
+        {
+            "input": "hi",
+            "answer": "hi",
+            "explanation": "text consts of only one word"
         }
     ],
     "Extra": [
         {
-            "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
+            "input": "Holy Edison",
+            "answer": "Holy"
         },
         {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
+            "input": "Don't speak... I know just what you're saying",
+            "answer": "Don't"
         }
     ]
 }
