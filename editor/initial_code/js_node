@@ -1,7 +1,7 @@
 "use strict";
 
 function firstWord(a, b) {
-    // sums two passed arguments
+    // returns the first word in a given text.
 
     // your code here
     return 0;
