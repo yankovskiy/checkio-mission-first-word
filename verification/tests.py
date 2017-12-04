@@ -48,6 +48,10 @@ TESTS = {
         {
             "input": "Don't speak... I know just what you're saying",
             "answer": "Don't"
+        },
+        {
+            "input": "Hello.World",
+            "answer": "Hello"
         }
     ]
 }
