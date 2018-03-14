@@ -6,7 +6,9 @@
         I have no idea how to start solving this mission
     </div>
     <div class="answer">
-        First of all you can use "replace" method to replace dots and commas with spaces.
+        First of all you can use 
+        <a href='https://docs.python.org/3/library/stdtypes.html?highlight=replace#str.replace'>str.replace()</a>
+        method to replace dots and commas with spaces.
     </div>
 </div>
 <div class="question-answer">
@@ -14,7 +16,14 @@
         I need some help to proceed with the mission
     </div>
     <div class="answer">
-        Than you can use "strip" method to delete all spaces at the begin and at the end of the string.
+        "replace" is work like that:
+        <pre class="brush: python">
+        text = "...hello..."
+        text = text.replace('.', ' ')
+        "   hello   "</pre>
+        Than you can use
+        <a href='https://docs.python.org/3/library/stdtypes.html?highlight=strip#str.strip'>str.strip()</a>
+        method to delete all spaces at the begin and at the end of the string.
     </div>
 </div>
 <div class="question-answer">
@@ -22,7 +31,13 @@
         I have gone half way through. Need help!
     </div>
     <div class="answer">
-        When you have pure string with words and spaces only, you can "split" it.
+        "strip" is work like that:
+        <pre class="brush: python">
+        text = "   hello   "
+        text = text.strip()
+        "hello"</pre>
+        When you have pure string with words and spaces only, you can
+        <a href='https://docs.python.org/3/library/stdtypes.html?highlight=split#str.split'>split</a> it.
     </div>
 </div>
 <div class="question-answer">
@@ -30,7 +45,16 @@
         I am stuck. I need a small hint.
     </div>
     <div class="answer">
-        The last thing you should do - is to find the first element in you list of words.
+        "split" is work like that:
+        <pre class="brush: python">
+        text = "hello dude"
+        text = text.split()
+        ["hello", "dude"]</pre>
+        The last thing you should do - is to find the first element in you list of words.<br>
+        Use indices like that:
+        <pre class="brush: python">
+        text = ["hello", "dude"]
+        text[1] ==> "dude"</pre>.
     </div>
 </div>
 
