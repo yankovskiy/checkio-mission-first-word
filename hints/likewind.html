@@ -11,51 +11,94 @@
         method to replace dots and commas with spaces.
     </div>
 </div>
+
+<div class="question-answer">
+    <div class="question">
+        Can you show me, how to use it?
+    </div>
+    <div class="answer">
+        "replace" is work like that:
+        <pre class="brush: python">
+        text = text.replace('.', ' ').replace(',', ' ')</pre>
+        For example:<br>
+        text = ".,.hello dude.,."<br>
+        then we use the code above and get:<br>
+        "   hello dude   "<br>
+    </div>
+</div>    
+    
 <div class="question-answer">
     <div class="question">
         I need some help to proceed with the mission
     </div>
     <div class="answer">
-        "replace" is work like that:
-        <pre class="brush: python">
-        text = "...hello..."
-        text = text.replace('.', ' ')
-        "   hello   "</pre>
-        Than you can use
+        Now you can use
         <a href='https://docs.python.org/3/library/stdtypes.html?highlight=strip#str.strip'>str.strip()</a>
         method to delete all spaces at the begin and at the end of the string.
     </div>
 </div>
+
+<div class="question-answer">
+    <div class="question">
+        Nothing works... Help!
+    </div>
+    <div class="answer">
+        Your code should looks like:
+        <pre class="brush: python">
+        text = text.replace('.', ' ').replace(',', ' ').strip()</pre>
+        And this stuff converts our input ".,.hello dude.,." into "hello dude". You are close!
+    </div>
+</div>
+    
+<div class="question-answer">
+    <div class="question">
+        Emmm... What's next?
+    </div>
+    <div class="answer">        
+        When you have pure string with words and spaces only between them, you can
+        <a href='https://docs.python.org/3/library/stdtypes.html?highlight=split#str.split'>split</a> it.
+    </div>
+</div>
+    
 <div class="question-answer">
     <div class="question">
         I have gone half way through. Need help!
     </div>
     <div class="answer">
-        "strip" is work like that:
+        Just type:
         <pre class="brush: python">
-        text = "   hello   "
-        text = text.strip()
-        "hello"</pre>
-        When you have pure string with words and spaces only, you can
-        <a href='https://docs.python.org/3/library/stdtypes.html?highlight=split#str.split'>split</a> it.
+        text = text.replace('.', ' ').replace(',', ' ').strip()
+        text = text.split()</pre>
+        And you will get a list of words - ["hello", "dude"]
     </div>
 </div>
+    
 <div class="question-answer">
     <div class="question">
         I am stuck. I need a small hint.
     </div>
     <div class="answer">
-        "split" is work like that:
-        <pre class="brush: python">
-        text = "hello dude"
-        text = text.split()
-        ["hello", "dude"]</pre>
-        The last thing you should do - is to find the first element in you list of words.<br>
-        Use indices like that:
-        <pre class="brush: python">
-        text = ["hello", "dude"]
-        text[1] ==> "dude"</pre>.
+        The last thing you should do - is to find the
+        first <a href='https://docs.python.org/3/library/stdtypes.html?highlight=list%20element'>element of the list</a>.
     </div>
 </div>
 
+<div class="question-answer">
+    <div class="question">
+        And the final answer is...
+    </div>
+    <div class="answer">
+        Full code is:
+        <pre class="brush: python">
+        text = text.replace('.', ' ').replace(',', ' ').strip()
+        text = text.split()
+        return text[0]</pre>
+        Or even simpler:
+        <pre class="brush: python">
+        text = text.replace('.', ' ').replace(',', ' ').strip()
+        return text.split()[0]</pre>
+    </div>
+</div>
+    
+    
 </body>
