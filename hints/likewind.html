@@ -1,0 +1,111 @@
+
+
+<body data-author="likewind">
+    
+<div class="question-answer">
+    <div class="question">
+        I have no idea how to start solving this mission
+    </div>
+    <div class="answer">
+        You can delete all dots and commas, then get a list of all words and find the first of them.
+    </div>
+</div>    
+    
+<div class="question-answer">
+    <div class="question">
+        Could you explain this in a small steps?
+    </div>
+    <div class="answer">
+        First of all you can use 
+        <a href='https://docs.python.org/3/library/stdtypes.html?highlight=replace#str.replace'>str.replace()</a>
+        method to replace dots and commas with spaces.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Can you show me, how to use it?
+    </div>
+    <div class="answer">
+        "replace" is work like that:
+        <pre class="brush: python">
+        text = text.replace('.', ' ').replace(',', ' ')</pre>
+        For example:<br>
+        text = ".,.hello dude.,."<br>
+        then we use the code above and get:<br>
+        "   hello dude   "<br>
+    </div>
+</div>    
+    
+<div class="question-answer">
+    <div class="question">
+        I need some help to proceed with the mission
+    </div>
+    <div class="answer">
+        Now you can use
+        <a href='https://docs.python.org/3/library/stdtypes.html?highlight=strip#str.strip'>str.strip()</a>
+        method to delete all spaces at the begin and at the end of the string.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Nothing works... Help!
+    </div>
+    <div class="answer">
+        Your code should looks like:
+        <pre class="brush: python">
+        text = text.replace('.', ' ').replace(',', ' ').strip()</pre>
+        And this stuff converts our input ".,.hello dude.,." into "hello dude". You are close!
+    </div>
+</div>
+    
+<div class="question-answer">
+    <div class="question">
+        Emmm... What's next?
+    </div>
+    <div class="answer">        
+        When you have pure string with words and spaces only between them, you can
+        <a href='https://docs.python.org/3/library/stdtypes.html?highlight=split#str.split'>split</a> it.
+    </div>
+</div>
+    
+<div class="question-answer">
+    <div class="question">
+        I have gone half way through. Need help!
+    </div>
+    <div class="answer">
+        Just type:
+        <pre class="brush: python">
+        text = text.replace('.', ' ').replace(',', ' ').strip()
+        text = text.split()</pre>
+        And you will get a list of words - ["hello", "dude"]
+    </div>
+</div>
+    
+<div class="question-answer">
+    <div class="question">
+        I am stuck. I need a small hint.
+    </div>
+    <div class="answer">
+        The last thing you should do - is to find the
+        first <a href='https://docs.python.org/3/library/stdtypes.html?highlight=list%20element'>element of the list</a>.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        And the final answer is...
+    </div>
+    <div class="answer">
+        Full code is:
+        <pre class="brush: python">
+        def first_word(text):
+            text = text.replace('.', ' ').replace(',', ' ').strip()
+            text = text.split()
+            return text[0]</pre>
+    </div>
+</div>
+    
+    
+</body>
