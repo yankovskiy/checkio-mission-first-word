@@ -1,0 +1,97 @@
+<body data-author="likewind">
+    
+<div class="question-answer">
+    <div class="question">
+        Я совершенно не знаю, с чего начать решение.
+    </div>
+    <div class="answer">
+        Для начала вы можете удалить все точки и запятые,
+        а затем составить список (list) слов и найти первый элемент списка.
+    </div>
+</div>    
+    
+<div class="question-answer">
+    <div class="question">
+        Вы не могли бы разбить это объяснение на более подробные шаги?
+    </div>
+    <div class="answer">
+        Прежде всего, попробуйте использовать метод 
+        <a href='https://docs.python.org/3/library/stdtypes.html?highlight=replace#str.replace'>str.replace()</a>
+        чтобы заменить точки и запятые пробелами.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Вы могли бы показать, как это реализовать в коде?
+    </div>
+    <div class="answer">
+        В данном случае код может выглядеть так:
+        <pre class="brush: python">
+        text = text.replace('.', ' ')
+        text = text.replace(',', ' ')</pre>
+        Например, если наш исходный текст:<br>
+        text = ".,.hello dude.,."<br>
+        мы используем код, написанный выше и получаем:<br>
+        "   hello dude   "<br>
+        Мы специально заменяем точки и запятые на пробелы, а не убираем их (заменяя на пустые строки - ""), чтобы избежать
+        ситуации объединения двух слов в одно. Например, если бы наш исходный текст выглядел как "hi,dude", при замене
+        знаков препинания на пробелы мы получим "hi dude", где легко можно будет определить первое слово. Если же
+        заменить запятую на "", то результат будет - "hidude" - одно цельное слово.
+        Также, этот код может быть записан в одну строку:
+        <pre class="brush: python">
+        text = text.replace('.', ' ').replace(',', ' ')</pre>
+    </div>
+</div>    
+    
+<div class="question-answer">
+    <div class="question">
+        Что нужно делать после удаления точек и запятых?
+    </div>
+    <div class="answer">        
+        Теперь, когда у вас есть строка, состоящая только из слов, разделенных пробелами, вы можете использовать метод
+        <a href='https://docs.python.org/3/library/stdtypes.html?highlight=split#str.split'>split</a>. Он разбивает строку
+        на отдельные элементы, возвращая результат в виде list. Вам лишь останется найти первый элемент списка (первое слово).
+    </div>
+</div>
+    
+<div class="question-answer">
+    <div class="question">
+        Я не совсем представляю, как должен выглядеть код...
+    </div>
+    <div class="answer">
+        К коду, написанному ранее, достаточно добавить всего одну строку и мы получим:
+        <pre class="brush: python">
+        text = text.replace('.', ' ').replace(',', ' ')
+        words = text.split()</pre>
+        В результате выполнения этого кода исходный текст ".,.hello dude.,." преобразуется в список слов - ["hello", "dude"]
+    </div>
+</div>
+    
+<div class="question-answer">
+    <div class="question">
+        Я застрял. Мне нужна небольшая подсказка.
+    </div>
+    <div class="answer">
+        Последнее, что вам необходимо сделать - найти первый элемент списка. Это можно сделать, обратившись к нему по индексу,
+        например так - words[0]. Обратите внимание, что нумерация начинается не с 1, а именно с 0 - это очень важный момент
+        в Python.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Как будет выглядеть программа полностью?
+    </div>
+    <div class="answer">
+        Полная версия кода выглядит так:
+        <pre class="brush: python">
+        def first_word(text):
+            text = text.replace('.', ' ').replace(',', ' ')
+            text = text.split()
+            return text[0]</pre>
+    </div>
+</div>
+    
+    
+</body>
