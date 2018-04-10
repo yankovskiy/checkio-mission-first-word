@@ -29,7 +29,7 @@
     <div class="answer">
         "replace" is work like that:
         <pre class="brush: python">
-        text = text.replace('.', ' ').replace(',', ' ')</pre>
+text = text.replace('.', ' ').replace(',', ' ')</pre>
         For example:<br>
         text = ".,.hello dude.,."<br>
         then we use the code above and get:<br>
@@ -55,7 +55,7 @@
     <div class="answer">
         Your code should look like this:
         <pre class="brush: python">
-        text = text.replace('.', ' ').replace(',', ' ').strip()</pre>
+text = text.replace('.', ' ').replace(',', ' ').strip()</pre>
         And this stuff converts our input ".,.hello dude.,." into "hello dude". You are close!
     </div>
 </div>
@@ -77,8 +77,8 @@
     <div class="answer">
         Just type:
         <pre class="brush: python">
-        text = text.replace('.', ' ').replace(',', ' ').strip()
-        text = text.split()</pre>
+text = text.replace('.', ' ').replace(',', ' ').strip()
+text = text.split()</pre>
         And you will get a list of words - ["hello", "dude"]
     </div>
 </div>
@@ -100,10 +100,10 @@
     <div class="answer">
         Full code is:
         <pre class="brush: python">
-        def first_word(text):
-            text = text.replace('.', ' ').replace(',', ' ').strip()
-            text = text.split()
-            return text[0]</pre>
+def first_word(text):
+    text = text.replace('.', ' ').replace(',', ' ').strip()
+    text = text.split()
+    return text[0]</pre>
     </div>
 </div>
     
