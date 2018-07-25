@@ -1,10 +1,10 @@
 "use strict";
 
-function firstWord(a, b) {
+function firstWord(str) {
     // returns the first word in a given text.
 
     // your code here
-    return 0;
+    return str;
 }
 
 var assert = require('assert');
